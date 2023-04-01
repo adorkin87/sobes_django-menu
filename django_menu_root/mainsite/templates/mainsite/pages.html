@@ -1,0 +1,19 @@
+{% load draw_menu %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1><a href="{% url 'home' %}">Ссылка на главную</a></h1>
+  {% autoescape off %}
+  {% draw_menu 'main_menu' %}
+  {% endautoescape %}
+
+  <p><b>Текущая страница: {{ slug }}</b></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus atque beatae dolor doloribus eaque excepturi, ipsa magni minima necessitatibus, officia perspiciatis quod, reiciendis repellat repellendus totam voluptatum. Autem, obcaecati.</p>
+
+</body>
+</html>
